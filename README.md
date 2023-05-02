@@ -1,6 +1,6 @@
 # GPT Tuning
 
-![Official Documentation](https://platform.openai.com/docs/guides/fine-tuning)
+[Official Documentation](https://platform.openai.com/docs/guides/fine-tuning)
 
 Installation
 
