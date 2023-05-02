@@ -11,7 +11,7 @@ def on_submit():
     original_prompt = input_field.get()
     
     # Modify the prompt to ask for the genre
-    prompt = f"Rank the following genres in order of their relevance to the given text: [thriller, fantasy, science fiction, history, horror, crime, romance, psychology, sports, travel]. Text: \"{original_prompt}\""
+    prompt = f"Analyze the following text and provide one relevant genre from the list: [thriller, fantasy, science fiction, history, horror, crime, romance, psychology, sports, travel].\n\nText: \"{original_prompt}\"\n\nGenre:"
 
     # Make the completion request
     completion = openai.Completion.create(model=model_name, prompt=prompt, max_tokens=100, temperature=0.8)
@@ -25,9 +25,7 @@ def on_submit():
     text = completion.choices[0]["text"].strip()
 
     # Extract the genre from the text using a regular expression
-    genre = re.findall(r'\b(?:thriller|fantasy|science fiction|history|horror|crime|romance|psychology|sports|travel)\b', text)
-
-    print("Genre:", genre)
+    genre = re.findall(r'\b(?:thriller|fantasy|science fiction|history|horror|crime|romance|psychology|sports|travel)\b', text)[:2]
 
     # Join the genres found in the text (if any) and display them in the result text area
     result_text.config(state="normal")
