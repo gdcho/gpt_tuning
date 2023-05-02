@@ -47,4 +47,4 @@ openai api fine_tunes.follow -i <YOUR_FINE_TUNE_JOB_ID> // to follow the progres
 ```
 
 <p>Now we just wait for the fine-tuning to finish. This can take a while depending on the size of the dataset and the model you chose.</p>
-![image](https://user-images.githubusercontent.com/48280799/235599700-43be23c1-e5fb-4d89-9793-2d1e1022a677.png)
+[image](https://user-images.githubusercontent.com/48280799/235599700-43be23c1-e5fb-4d89-9793-2d1e1022a677.png)
